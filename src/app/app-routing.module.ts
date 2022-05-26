@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { AdminAuthGuardService } from './services/guard/admin-auth-guard.service';
-import { VendorAuthGuardService } from './services/guard/vendor-auth-guard.service';
-import { NoAccessPageComponent } from './shared/error/no-access-page/no-access-page.component';
+import { AdminAuthGuardService } from './core/utils/services/guard/admin-auth-guard.service';
+import { VendorAuthGuardService } from './core/utils/services/guard/vendor-auth-guard.service';
+import { AdminComponent } from './pages/admin/admin.component';
+import { NoAccessPageComponent } from './pages/shared/error/no-access-page/no-access-page.component';
 
 const routes: Routes = [
   {
     path: 'E',
-    loadChildren: () => import('./external/external.module').then(m => m.ExternalModule)
+    loadChildren: () => import('./pages/external/external.module').then(m => m.ExternalModule)
   },
   {
     path: 'Admin',
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule),
     component: AdminComponent,
     canActivate: [AdminAuthGuardService]
   },
   {
     path: 'Vendor',
-    loadChildren: () => import('./vendor/vendor.module').then(m => m.VendorModule),
+    loadChildren: () => import('./pages/vendor/vendor.module').then(m => m.VendorModule),
     canActivate: [VendorAuthGuardService]
   },
   { path: '', redirectTo: 'E', pathMatch: 'full' },

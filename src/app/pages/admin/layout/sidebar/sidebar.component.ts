@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  {SidemenuList} from '../../../../assets/mockData/sideMenuList';
+import { SidemenuList } from 'src/assets/mockData/sideMenuList';
 
 @Component({
   selector: 'admin-sidebar',

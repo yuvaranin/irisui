@@ -45,7 +45,8 @@
     <ng-template #tree let-allItems let-idx="idx">
         <ul class = "nav m-3 flex-column">
             <li *ngFor="let item of allItems; let n = index">
-                <a  class="nav-heading" (click)="toggle[idx + '.' + n] = !toggle[idx + '.' + n]">
+                <a class="nav" routerLink={{item.sref}} >
+                  <!-- (click)="toggle[idx + '.' + n] = !toggle[idx + '.' + n]" -->
                   <i class={{item.icon}}></i>
                   <span>{{item.text}}</span></a>
                 <div *ngIf="item.text && toggle[idx + '.' + n]">

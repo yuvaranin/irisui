@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  {ImpersonateData} from '../../../assets/mockData/impersonate';
+import { ImpersonateData } from 'src/assets/mockData/impersonate';
 @Component({
   selector: 'app-impersonate',
   templateUrl: './impersonate.component.html',

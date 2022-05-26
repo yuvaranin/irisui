@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignInAuthGuardService } from '../services/guard/sign-in-auth-guard.service';
+import { SignInAuthGuardService } from 'src/app/core/utils/services/guard/sign-in-auth-guard.service';
 
 const routes: Routes = [
   {

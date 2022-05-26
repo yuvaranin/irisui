@@ -1,0 +1,78 @@
+<div class="row gearbox-animate-ng-hide-remove" ng-show="!viewModel.ShowClientDetails">
+  <div class="col-md-12">
+      <div class="panel panel-default panel-themed gearbox-animate-ng-enter">
+          <div class="panel-heading header">
+              <h4 class="panel-title" translate>Create a New Client</h4>
+          </div>
+          <div class="panel-body">
+              <div class="row">
+                  <div class="col-md-12 text-center">
+                      <h4 ng-if="$root.viewport != 'visible-xs'">Click here to create a new Client: &nbsp; &nbsp; <a href="/Admin/Client/Create" class="btn btn-success btn-themed"><i class="fa fa-plus"></i> Create</a></h4>
+                      <a ng-if="$root.viewport == 'visible-xs'" href="/Admin/Client/Create" class="btn btn-success btn-themed" translate>Create Client</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="small-space"></div>
+      <div class="panel panel-default panel-themed gearbox-animate-ng-enter">
+          <div class="panel-heading header">
+              <h4 class="panel-title">Clients</h4>
+          </div>
+          <div class="panel-body">
+              <div class="row">
+                  <div class="col-md-12" st-table="clients" st-pipe="loadClientTable">
+                      <div gearbox-loading-spinner="clientTable.isLoading"></div>
+                      <div class="row">
+                          <div class="col-md-3 col-sm-6" ng-style="{ 'margin-top': $root.viewport == 'visible-xs' ? '10px' : '0' }">
+                              <label for="pageSizeSelect" class="control-label" translate>Results per Page</label>
+                              <select id="pageSizeSelect" class="form-control" ng-options="o as o for o in $root.tablePageSizeOptions" ng-model="clientTable.pageSize"></select>
+                          </div>
+                          <div class="col-md-3 col-sm-6" ng-style="{ 'margin-top': $root.viewport == 'visible-xs' ? '10px' : '0' }">
+                              <label for="activeStatusFilter" class="control-label">Active Status</label>
+                              <select id="activeStatusFilter" st-search-model st-predicate="activeStatus" class="form-control" ng-options="o.value as o.label for o in activeStatusFilterOptions" ng-model="viewModel.ActiveStatus">
+                                  <option value="">All</option>
+                              </select>
+                          </div>
+                          <div class="col-md-6 col-sm-12" ng-style="{ 'margin-top': $root.viewport == 'visible-sm' ? '10px' : '0' }">
+                              <div ng-show="$root.viewport == 'visible-xs'" class="extra-small-space"></div>
+                              <label for="search" class="control-label" translate>Search</label>
+                              <input st-search placeholder="{{ 'Search within' }} {{ 'Clients'  }}..." class="form-control" type="search" />
+                          </div>
+                      </div>
+                      <div class="small-space"></div>
+                      <div class="row" ng-style="{ 'overflow-x': $root.viewport == 'visible-xs' ? 'scroll' : 'auto' }">
+                          <div class="col-md-12">
+                              <table class="table responsive-table" style="margin-bottom: 0;">
+                                  <thead>
+                                      <tr>
+                                          <th st-sort="Id">Id</th>
+                                          <th st-sort="Name" st-sort-default="true">Name</th>
+                                          <th>Action</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr *ngFor="let row of clientListData.Items" ng-class="{ danger: !row.IsActive }">
+                                          <td>{{ row.Id }}</td>
+                                          <td>{{ row.Name }}</td>
+                                          <td><a href="/Admin/Client/Edit/{{ row.Id }}">Edit</a></td>
+                                      </tr>
+                                      <tr *ngIf="!clientListData.Items" class="no-hover">
+                                          <td colspan="3" translate>No records found.</td>
+                                      </tr>
+                                  </tbody>
+                                  <tfoot>
+                              </table>
+                          </div>
+                      </div>
+                      <div st-pagination="" st-items-by-page="clientTable.parsedPageSize"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row" ng-if="viewModel.ShowClientDetails">
+  <div class="col-md-12">
+      <!-- <gearbox-client-edit view-model="viewModel" back-fn="hideClientDetails()" back-message="{{ 'Go Back' | translate }}"></gearbox-client-edit> -->
+  </div>
+</div>

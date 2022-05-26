@@ -10,12 +10,12 @@ import { vendorRootData } from 'src/assets/mockData/vendorRootDataMockup';
 export class HeaderComponent implements OnInit {
   vendorData = vendorRootData;
   constructor(public router: Router) { }
-  showMenu:boolean=false;
+
   ngOnInit(): void {
   }
   logout() {
     localStorage.clear();
-    this.router.navigate(['/']);
+    this.router.navigate(['login']);
   }
   stopImpersonating() {
 console.log("stop impersonation");
@@ -23,8 +23,5 @@ console.log("stop impersonation");
   selectCulture(){
     console.log("selectCulture");
 
-  }
-  toggleShowMenu(){
-    this.showMenu=!this.showMenu;
   }
 }

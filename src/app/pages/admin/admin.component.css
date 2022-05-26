@@ -1,13 +1,12 @@
  /* Application styles */
  /* @import "../../assets/css/admin/admin-app-layout.css"; */
 /* @import "../../assets/css/admin/app-rtl.css"; */
-@import "../../assets/css/admin/app.css";
+@import "../../../assets/css/admin/app.css";
 
 /* Bootstrap styles */
 /* @import "../../assets/css/admin/bootstrap-rtl.css"; */
-/* @import "../../assets/css/admin/bootstrap.css"; */
-@import "../../assets/css/admin/theme-g.css";
-
+@import "../../../assets/css/admin/bootstrap.css";
+@import "../../../assets/css/admin/theme-g.css";
 
 a.btn-primary, a.btn-success, a.btn-info, a.btn-warning, a.btn-danger {
   color: #fff;
