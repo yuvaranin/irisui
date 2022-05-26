@@ -1,0 +1,60 @@
+<!-- Inline template with sidebar items markup and ng-directives-->
+
+<!-- START Sidebar (left)-->
+
+
+<!-- <div class="aside-inner">
+  <nav data-sidebar-anyclick-close="" class="sidebar">
+      <ul class="nav" *ngFor="let item of sideMenuItems;let i = index">
+          <li *ngIf="item.heading" class="nav-heading">
+              <span data-localize="sidebar.heading.HEADER">{{item.text}}</span>
+          </li>
+          <li *ngIf="!item.heading" >
+              <a title="{{item.text}}"(click)="toggleCollapse()">
+                  <em class="fa fa-building"></em>
+                  <span>{{item.text}}</span>
+              </a>
+              <ul  *ngFor="let sidemenu of item.submenu;let j= index" class="nav sidebar-subnav" [ngClass]="collapseSideMenu ? 'collapse' : ''">
+                  <li class="">
+                      <a title="Accounting/Funding">
+                          <span>{{sidemenu.text}}</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+       </ul>
+  </nav>
+</div> -->
+
+<div class="aside-inner">
+    <nav data-sidebar-anyclick-close="" class="sidebar">
+    <ul class="nav" *ngFor="let item of sideMenuItems; let i = index">
+        <li *ngIf="item.heading" class="nav-heading">
+            <span data-localize="sidebar.heading.HEADER">{{item.text}}</span>
+        </li>
+        <li *ngIf="!item.heading">
+            <a (click)="toggle[i] = !toggle[i]">
+              <em class={{item.icon}}></em>
+              <span>{{item.text }}</span></a>
+            <div *ngIf="item.submenu && toggle[i]">
+                <ng-container *ngTemplateOutlet="tree; context: { $implicit: item.submenu, idx: i }"></ng-container>
+            </div>
+        </li>
+    </ul>
+
+    <ng-template #tree let-allItems let-idx="idx">
+        <ul class = "nav m-3 flex-column">
+            <li *ngFor="let item of allItems; let n = index">
+                <a  class="nav-heading" (click)="toggle[idx + '.' + n] = !toggle[idx + '.' + n]">
+                  <i class={{item.icon}}></i>
+                  <span>{{item.text}}</span></a>
+                <div *ngIf="item.text && toggle[idx + '.' + n]">
+                    <ng-container *ngTemplateOutlet="tree; context: item.text"></ng-container>
+                </div>
+            </li>
+        </ul>
+    </ng-template>
+    </nav>
+</div>
+
+<!-- END Sidebar (left)-->

@@ -1,0 +1,26 @@
+<div class="wrapper ng-scope">
+  <!-- top navbar-->
+<header  ng-show="useSharedLayout" class="topnavbar-wrapper">
+  <admin-top-nav-bar></admin-top-nav-bar>
+  </header>
+  <!-- sidebar-->
+  <aside ng-show="useSharedLayout" ng-controller="SidebarController" class="aside">
+   <admin-sidebar></admin-sidebar>
+  </aside>
+  <!-- offsidebar-->
+  <!-- <aside  ng-show="useSharedLayout" class="offsidebar">
+    <admin-off-side-bar></admin-off-side-bar>
+  </aside> -->
+  <!-- Main section-->
+  <section>
+      <!-- <div style="position: absolute;" id="loading-bar"></div> -->
+      <!-- Page content-->
+      <!-- <div class="col-xs-12 text-right" style="margin-top: 10px; margin-bottom: 3px;" ng-if="deploymentName && useSharedLayout" ng-bind="deploymentName"></div> -->
+      <div class="initialization-wrapper">
+          <div  autoscroll="false" ng-class="app.viewAnimation" class="content-wrapper">
+            <p>Welcome to Admin dashboard.We are upgrading from AngularJs to Angular 13</p>
+            <router-outlet></router-outlet>
+          </div>
+      </div>
+  </section>
+</div>

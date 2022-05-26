@@ -1,0 +1,27 @@
+﻿.popover-btn {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#loading-bar .bar {
+  position: relative;
+}
+
+.extra-wide-popover {
+    max-width: 90% !important;
+}
+
+label.checkbox {
+    margin-left: 20px;
+}
+
+.bs-callout.bg-warning .text-warning,
+.bs-callout.bg-danger .text-danger,
+.bs-callout.bg-success .text-success,
+.bs-callout.bg-primary .text-primary {
+    color: white !important;
+}
+
+.gearbox-multiselect .btn-group {
+    height: 35px !important;
+}

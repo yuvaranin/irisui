@@ -1,0 +1,64 @@
+ /* Application styles */
+ /* @import "../../assets/css/admin/admin-app-layout.css"; */
+/* @import "../../assets/css/admin/app-rtl.css"; */
+@import "../../assets/css/admin/app.css";
+
+/* Bootstrap styles */
+/* @import "../../assets/css/admin/bootstrap-rtl.css"; */
+/* @import "../../assets/css/admin/bootstrap.css"; */
+@import "../../assets/css/admin/theme-g.css";
+
+
+a.btn-primary, a.btn-success, a.btn-info, a.btn-warning, a.btn-danger {
+  color: #fff;
+}
+
+ul.pagination li.active a {
+  color: #fff;
+}
+
+.bootbox.modal {
+  z-index: 1060 !important;
+}
+
+/* Make inline editables take the full width of their parents */
+.editable-wrap,
+.editable-wrap .editable-controls.form-group,
+.editable-wrap .editable-controls.form-group .editable-input,
+.editable-wrap .editable-controls.form-group .editable-input textarea,
+.editable-wrap .editable-controls.form-group .editable-input select,
+.editable-wrap .editable-controls.form-group .editable-input input:not([type=radio]):not([type=checkbox]):not([type=submit])
+{
+  width: 100%;
+}
+
+.editable-wrap.editable-checkbox
+{
+  width: 15px;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover a:not(.cke_dialog_ui_button_ok) {
+  color: #555 !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td {
+  background-color: #fff !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td.cke_dialog_footer {
+  background-color: #eee !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td.cke_dark_background {
+  background-color: #eee !important;
+}
+
+.fullscreen-modal .modal-dialog {
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.fullscreen-modal .modal-content {
+border-radius: 0;
+}
+
+#loading-bar bar {
+  position: relative;
+}

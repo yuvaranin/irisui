@@ -1,0 +1,483 @@
+﻿@media print {
+    a[href]:after {
+        content: "";
+    }
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height. this should be dynamic */
+    /*margin-bottom: 100px;*/
+    background-color: #fff !important;
+}
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+    /*height: 100px;*/
+    background-color: #ccc;
+    font-size: 85%;
+    padding-bottom: 10px;
+}
+    #footer > .container:first-child {
+        padding-top:20px;
+    }
+
+.subnavbar {
+    padding-top: 60px;
+    background-color: #ccc;
+    font-size: 125%;
+}
+.sub-nav-toggle {
+    cursor: pointer;
+    padding-left: 10px;
+}
+    .sub-nav-toggle > span {
+        font-size: 85%
+    }
+.sub-nav-collapse {
+    display: none;
+    width: 100%;
+}
+.sub-nav-collapse > .row > .col-md-3 {
+    font-size: 75%;
+}
+.subnavbar .list-inline {
+    margin-bottom: 10px;
+}
+.navbar-header .navbar-icon {
+	line-height:50px;
+	height:50px;
+}
+.navbar-header  a.navbar-icon {
+	padding: 0 0 0 20px;
+	color: white;
+	float: left;
+}
+.budget-dropdown {
+    min-width: 300px !important;
+    padding-top: 0 !important;
+    height: auto;
+    max-height: 80vh;
+    overflow-x: hidden;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.image-container {
+    padding: 5px;
+}
+.image-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.responsive-table {
+    min-width: 100%;
+}
+
+.logo-height {
+    max-height: 50px;
+}
+
+.content-container {
+    height:100%;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.large-space {
+    min-height: 40px;
+}
+.small-space {
+    min-height: 20px;
+}
+.extra-small-space {
+    min-height: 10px;
+}
+
+#busy-panel, .busy-panel {
+    z-index: 1000;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    /*background-image: url('/Content/images/iris-spinner.gif');*/
+    background-image: url('/Images/preloader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-nav-back {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 1px;
+}
+
+.checkout-selected-label-style {
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.125);
+    box-shadow: 3px 3px 3px rgba(0,0,0,.125);
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    color: #555!important;
+}
+
+.text-lighten {
+    -webkit-filter: brightness(1.5);
+    -moz-filter	: brightness(1.5);
+    -ms-filter	: brightness(1.5);
+    -o-filter 	: brightness(1.5);
+    filter: brightness(1.5);
+}
+.text-darken {
+    -webkit-filter: brightness(.5);
+    -moz-filter	: brightness(.5);
+    -ms-filter	: brightness(.5);
+    -o-filter 	: brightness(.5);
+    filter: brightness(.5);
+}
+
+@media (min-width: 768px){
+	.catalog-categories > .row > .col-md-12 > a > div > div:hover {
+		background-color: #428bca;
+		color: #fff;
+	}
+	.catalog-categories > .row > .col-md-12 > a > div > div.active {
+		background-color: #428bca;
+		color: #fff;
+	}
+	.catalog-categories > .row > .col-md-12 > a > div > div {
+		padding-top: 2.5px;
+		padding-bottom: 2.5px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+	.cart-hide {
+		display: inline!important;
+	}
+	#copyright {
+		padding-top: 20px;
+	}
+
+	.xs-hide {
+		display: none!important;
+	}
+	.mobile-category-expand {
+	    position: fixed;
+        left: 0;
+        top: 320px;
+	    z-index: 999;
+
+	    height: 50px;
+	    width: 50px;
+	    background-color: #ccc;
+
+	    line-height: 50px;
+	    vertical-align: middle;
+
+	    text-align: center;
+	    cursor: pointer;
+    }
+
+
+    .mobile-category-container {
+	        display: block;
+	        position: fixed;
+	        left: 50px;
+            top: 100px;
+	        width: 0;
+	        height: 80%;
+	        z-index: 999;
+	        background-color: #ccc;
+	        overflow-y: scroll;
+            overflow-x: hidden;
+	        padding: 0;
+    }
+    .mobile-category-container-toggle {
+    }
+
+    .catalog-categories > .row > .col-md-12 > a > .row {
+	    padding: 10px 0;
+	    border-bottom: 1px solid #888;
+    }
+
+    .gearbox-filter-btn-group > .input-group-btn > ul  {
+        position:absolute;
+        left:0px !important;
+        width:calc(100vw - 30px);
+    }
+    .gearbox-filter-btn-group > ul  {
+        position:absolute;
+        left:0px !important;
+        width:calc(100vw - 30px);
+    }
+
+    .filter-input-group.input-group .input-group-btn {
+  	  width:100%;
+      display:inline-block;
+      margin-bottom:5px;
+	}
+    .filter-input-group.input-group .filter-icon-btn-left {
+  	  width:40px !important;
+	  display: inline-block;
+      margin-bottom:5px;
+      margin-right:-1px;
+      border-radius:4px 0 0 4px;
+      float:left;
+	}
+    .filter-input-group.input-group .filter-icon-btn-right {
+  	  width:40px !important;
+	  display: inline-block;
+      margin-bottom:5px;
+      margin-left:-1px;
+      border-radius:0 4px 4px 0;
+      float:right;
+	}
+	.filter-input-group.input-group .input-group-btn .filter-submit {
+	    border-radius:4px 0 0 4px;
+	    display: inline-block;
+        margin-left:0;
+        width: calc(100% - 34px)
+	}
+	.filter-input-group.input-group .input-group-btn .dropdown-menu {
+        width: 100%;
+	}
+    .filter-input-group {
+	    display: block;
+	    width: 100%;
+	}
+    .filter-input-group .dropdown-menu {
+        width:100%;
+        left:0 !important;
+    }
+    .filter-input-group .dropdown-menu * table {
+        width:100%;
+    }
+	.filter-input-group.input-group  .input-group-addon {
+	    clear: both;
+	    display: inline-block;
+	    width: 100%;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	}
+	.filter-input-group.input-group .form-control {
+	    border-radius: 4px !important;
+	    display: inline-block;
+	    margin-bottom: 5px;
+	}
+	.filter-input-group.input-group .form-control.filter-icon-btn-before {
+        border-radius: 0 4px 4px 0 !important;
+	    display: inline-block;
+	    margin-left:-1px;
+	    margin-bottom: 5px;
+        width: calc(100% - 40px);
+	}
+	.filter-input-group.input-group .form-control.filter-icon-btn-after {
+        border-radius: 4px 0px 0px 4px !important;
+	    display: inline-block;
+	    margin-right:-1px;
+	    margin-bottom: 5px;
+        width: calc(100% - 40px);
+	}
+    .editable-wrap {
+        width: 100%;
+    }
+    .navbar-collapse {
+        height: calc(100vh - 56px) !important;
+        max-height: calc(100vh - 56px) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px){
+	.cart-hide {
+		display: none!important;
+	}
+
+	.sm-hide {
+		display: none!important;
+	}
+
+    .mobile-category-expand {
+	position: fixed;
+    left: 0;
+    top: 275px;
+	z-index: 999;
+
+	height: 50px;
+	width: 50px;
+	background-color: #ccc;
+
+	line-height: 50px;
+	vertical-align: middle;
+
+	text-align: center;
+	cursor: pointer;
+    }
+
+    .mobile-category-container {
+	    display: block;
+	    position: fixed;
+	    left: 50px;
+        top: 100px;
+	    width: 0;
+	    height: 80%;
+	    z-index: 999;
+	    background-color: #ccc;
+	    overflow: hidden;
+	    padding: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .mobile-category-container-toggle {
+    }
+
+    .catalog-categories > .row > .col-md-12 > a > .row {
+	    padding: 10px 0;
+	    border-bottom: 1px solid #888;
+    }
+}
+	@media (min-width: 991px){
+        .mobile-category-container {
+            display: none;
+        }
+	}
+
+@media (min-width: 991px) and (max-width:1200px){
+	.md-hide {
+		display: none!important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.lg-hide {
+		display: none!important;
+	}
+}
+
+/* This moves the toastr to the bottom of our fixed navbar */
+.toast-top-full-width {
+    top: 51px;
+}
+
+/* This makes data table rows show a pointer and have a hover color so they look like a link */
+.responsive-table tbody tr:not(.no-hover) {
+    cursor: pointer;
+}
+.responsive-table tbody tr:not(.no-hover):hover {
+    background-color: #428bca;
+}
+.responsive-table tbody tr:not(.no-hover):hover a {
+    color: #fff !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td {
+    background-color: #fff !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td.cke_dialog_footer {
+    background-color: #eee !important;
+}
+.cke_dialog tbody > tr:not(.no-hover):hover td.cke_dark_background {
+    background-color: #eee !important;
+}
+
+.alert h2, .panel h2{
+    margin-top: 0;
+}
+
+/*this is for making embedded videos (vimeo) responsive*/
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 20px;
+}
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+/* this is for truncating single-line text boxes. */
+/* text box must have a width defined. */
+/* (bootstrap has a percentile width on col by default */
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.truncate .hover-show-overflow:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-all;
+}
+
+/* this is for truncating multi-line text boxes. */
+/* height should be a multiple of the line-height. */
+/* add this to your page
+.ellipsis, .ellipsis:before {
+    height: YOUR CONTAINER HEIGHTpx;
+}
+*/
+
+.ellipsis {
+	overflow: hidden;
+    line-height: inherit;
+}
+
+.ellipsis:before {
+	content:"";
+	float: left;
+	width: 5px;
+}
+
+.ellipsis > *:first-child {
+	float: right;
+	width: 100%;
+	margin-left: -5px;
+}
+.ellipsis > div > p {
+    margin:0;
+}
+
+.ellipsis:after {
+	content: "\02026";
+
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+
+	float: right; position: relative;
+	top: -25px; left: 100%;
+	width: 3em; margin-left: -3em;
+	padding-right: 5px;
+
+	text-align: right;
+
+	background: -webkit-gradient(linear, left top, right top,
+		from(rgba(255, 255, 255, 0)), to(white), color-stop(50%, white));
+	background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
+	background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
+	background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
+}
