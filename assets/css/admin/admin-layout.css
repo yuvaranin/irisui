@@ -1,0 +1,45 @@
+﻿@media print {
+    a[href]:after {
+        content: "";
+    }
+}
+
+
+.extra-large-space {
+    height: 5em;
+}
+.large-space {
+    height: 1.5em;
+}
+.small-space {
+    height: 1em;
+}
+.extra-small-space {
+    height: .25em;
+}
+
+.subnavbar {
+    padding-top: 50px; 
+    background-color: #ccc;
+}
+input[type="checkbox"] {
+    width:auto;
+}
+
+.modal-dialog {
+    z-index: 1041;
+}
+
+#ui-datepicker-div {
+    z-index: 9999 !important;
+}
+
+.select2-container.form-control {
+    height: auto;
+    min-height: 35px;
+}
+
+.select2-container .select2-choice {
+    height: auto;
+    min-height: 35px;
+}

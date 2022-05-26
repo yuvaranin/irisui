@@ -1,0 +1,48 @@
+﻿html,
+body,
+.wrapper,
+section,
+.initialization-wrapper,
+.content-wrapper,
+.content-container,
+.content-container > .row,
+.fields {
+    height: 100%;
+}
+
+.fields {
+    overflow-y: scroll;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.wrapper > section {
+    margin: 0 !important;
+}
+
+.wrapper > section .content-wrapper {
+    padding: 0;
+    margin-left: 230px;
+    margin-top: -22px;
+}
+
+.navbar.navbar-fixed-top {
+    z-index: 4;
+}
+.navbar.navbar-fixed-top.subnavbar {
+    z-index: 3;
+    padding-top: 55px;
+    background-color: #f5f5f5;
+    min-height: 96px;
+}
+
+.breadcrumb {
+    padding: 0;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background-color: #f5f5f5;
+}
+
+.modal-dialog {
+    z-index: 1041;
+}

@@ -1,0 +1,80 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height. this should be dynamic */
+    margin-bottom: 100px!important;
+}
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+    height: 100px;
+    background-color: #ccc;
+    font-size: 85%;
+    padding-bottom: 10px;
+    left:0;
+}
+    #footer > .container:first-child {
+        padding-top:20px;
+    }
+
+.login-widget .span12 {
+    vertical-align: middle!important;
+    display: inline-block!important;
+    background-color: red;
+}
+
+
+.logo {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+.browser-icon {
+    background-image: url('../images/browser-icons.png');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.chrome {
+    background-position: left 0;
+}
+.firefox {
+    background-position: 33% 0;
+}
+.ie {
+    background-position: 67% 0;
+}
+.safari {
+    background-position: right 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+.push {
+    height: 60px;
+}
+
+
+
+.logo-container {
+    width: 100%;
+    height: 180px;
+    line-height: 135px;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+    .logo-container img {
+        max-width: 90%;
+        max-height: 90%;
+    }
