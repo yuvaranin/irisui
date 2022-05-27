@@ -13,7 +13,8 @@ import { environment } from 'src/environments/environment';
 export class GenericAPIService {
 myCookies:any;
 
-    public baseUrL = environment.apiUrl;
+    public baseUrL = '';
+    //environment.apiUrl;
   constructor(
     public httpClient: HttpClient,
     public router: Router,
